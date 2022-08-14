@@ -25,5 +25,6 @@
 # Ôö¼Óssr
 git clone https://github.com/kenzok8/openwrt-packages.git package/openwrt-packages
 git clone https://github.com/kenzok8/small package/small
+svn co https://github.com/immortalwrt/packages/trunk/lang/lua-neturl package/lang/lua-neturl
 # git clone https://github.com/fw876/helloworld.git package/openwrt-packages/luci-app-ssr-plus
 git clone https://github.com/yufan666/luci-app-npc package/openwrt-packages/luci-app-npc
