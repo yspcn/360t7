@@ -14,7 +14,7 @@ https://github.com/kenzok8/openwrt-packages
 .....
 
 # 最新版下载&Download Latest
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/leopardciaw/D2?style=for-the-badge&label=Download)](https://github.com/leopardciaw/D2/releases/latest)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/yspcn/ACRH17?style=for-the-badge&label=Download)](https://github.com/yspcn/ACRH17/releases/latest)
 
 
 # 请注意
