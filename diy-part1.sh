@@ -23,8 +23,8 @@
 
 
 # Ôö¼Óssr
-git clone https://github.com/kenzok8/openwrt-packages.git package/openwrt-packages
-git clone https://github.com/kenzok8/small package/small
+# git clone https://github.com/kenzok8/openwrt-packages.git package/openwrt-packages
+git clone https://github.com/kiddin9/openwrt-packages package/openwrt-packages
 git clone https://github.com/ghosthgytop/npc package/npc
 svn co https://github.com/immortalwrt/packages/trunk/lang/lua-neturl package/lang/lua-neturl
 # git clone https://github.com/fw876/helloworld.git package/openwrt-packages/luci-app-ssr-plus
@@ -32,3 +32,5 @@ git clone https://github.com/yufan666/luci-app-npc package/openwrt-packages/luci
 svn co https://github.com/immortalwrt/immortalwrt/trunk/package/emortal package/emortal
 rm -rf package/emortal/default-settings
 svn co https://github.com/Lienol/openwrt/branches/22.03/package/default-settings package/default-settings
+svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-ramfree package/lean/luci-app-ramfree
+git clone https://github.com/Lienol/openwrt-OpenAppFilter package/openwrt-OpenAppFilter
