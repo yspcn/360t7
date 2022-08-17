@@ -29,5 +29,6 @@ git clone https://github.com/ghosthgytop/npc package/npc
 svn co https://github.com/immortalwrt/packages/trunk/lang/lua-neturl package/lang/lua-neturl
 # git clone https://github.com/fw876/helloworld.git package/openwrt-packages/luci-app-ssr-plus
 git clone https://github.com/yufan666/luci-app-npc package/openwrt-packages/luci-app-npc
-svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/default-settings package/lean/default-settings
- svn co https://github.com/immortalwrt/immortalwrt/trunk/package/emortal package/emortal
+svn co https://github.com/immortalwrt/immortalwrt/trunk/package/emortal package/emortal
+rm -rf package/emortal/default-settings
+svn co svn co https://github.com/Lienol/openwrt/branches/22.03/package/default-settings package/default-settings
