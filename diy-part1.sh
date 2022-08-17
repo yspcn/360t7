@@ -31,4 +31,4 @@ svn co https://github.com/immortalwrt/packages/trunk/lang/lua-neturl package/lan
 git clone https://github.com/yufan666/luci-app-npc package/openwrt-packages/luci-app-npc
 svn co https://github.com/immortalwrt/immortalwrt/trunk/package/emortal package/emortal
 rm -rf package/emortal/default-settings
-svn co svn co https://github.com/Lienol/openwrt/branches/22.03/package/default-settings package/default-settings
+svn co https://github.com/Lienol/openwrt/branches/22.03/package/default-settings package/default-settings
