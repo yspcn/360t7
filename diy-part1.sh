@@ -33,14 +33,14 @@ svn co https://github.com/immortalwrt/immortalwrt/trunk/package/emortal package/
 rm -rf package/emortal/default-settings
 svn co https://github.com/Lienol/openwrt/branches/22.03/package/default-settings package/default-settings
 svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-ramfree package/lean/luci-app-ramfree
-git clone https://github.com/Lienol/openwrt-OpenAppFilter package/openwrt-OpenAppFilter
+# git clone https://github.com/Lienol/openwrt-OpenAppFilter package/openwrt-OpenAppFilter
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-autoreboot package/lean/luci-app-autoreboot
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-cpufreq package/lean/luci-app-cpufreq
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-guest-wifi package/lean/luci-app-guest-wifi
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-homeassistant package/lean/luci-app-homeassistant
-svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-mwan3helper package/lean/luci-app-mwan3helper
-svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-turboacc package/lean/luci-app-turboacc
-svn co https://github.com/kiddin9/openwrt-packages/trunk/shortcut-fe package/lean/shortcut-fe
+# svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-mwan3helper package/lean/luci-app-mwan3helper
+# svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-turboacc package/lean/luci-app-turboacc
+# svn co https://github.com/kiddin9/openwrt-packages/trunk/shortcut-fe package/lean/shortcut-fe
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-vlmcsd package/lean/luci-app-vlmcsd
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-zerotier package/lean/luci-app-zerotier
 svn co https://github.com/kiddin9/openwrt-packages/trunk/vlmcsd package/lean/vlmcsd
@@ -48,3 +48,5 @@ svn co https://github.com/kiddin9/openwrt-packages/trunk/dnsforwarder package/le
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-lib-iform package/lean/luci-lib-iform
 svn co https://github.com/kiddin9/openwrt-packages/trunk/pdnsd-alt package/lean/pdnsd-alt
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-syncdial package/lean/luci-app-syncdial
+svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-netdata package/lean/luci-app-netdata
+svn co https://github.com/kiddin9/openwrt-packages/trunk/netdata package/lean/netdata
