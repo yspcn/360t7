@@ -23,7 +23,7 @@
 
 
 # Ôö¼Óssr
-# git clone https://github.com/kenzok8/openwrt-packages.git package/openwrt-packages
+git clone https://github.com/kenzok8/openwrt-packages.git package/openwrt-packages
 git clone https://github.com/kenzok8/small package/small
 git clone https://github.com/ghosthgytop/npc package/npc
 svn co https://github.com/immortalwrt/packages/trunk/lang/lua-neturl package/lang/lua-neturl
