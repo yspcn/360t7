@@ -39,7 +39,8 @@ svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-cpufreq packag
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-guest-wifi package/lean/luci-app-guest-wifi
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-homeassistant package/lean/luci-app-homeassistant
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-mwan3helper package/lean/luci-app-mwan3helper
-svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-turboacc package/lean/luci-app-turboacc
+# svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-turboacc package/lean/luci-app-turboacc
+# 取消turboacc
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-vlmcsd package/lean/luci-app-vlmcsd
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-zerotier package/lean/luci-app-zerotier
 svn co https://github.com/kiddin9/openwrt-packages/trunk/vlmcsd package/lean/vlmcsd
