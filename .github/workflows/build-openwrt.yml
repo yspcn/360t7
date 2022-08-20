@@ -19,7 +19,7 @@ on:
 #    types: published
 #  push:
 #    branches:
-      - master
+#      - master
 #    paths:
 #      - 'acrh17.config'
   schedule:
