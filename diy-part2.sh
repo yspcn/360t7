@@ -23,19 +23,19 @@ sed -i 's/OpenWrt/Acrh17/g' package/base-files/files/bin/config_generate
 sed -i "24i sed -i 's/downloads.openwrt.org/mirrors.cloud.tencent.com\/openwrt/g' /etc/opkg/distfeeds.conf" package/default-settings/files/zzz-default-settings
 
 # 修改luci默认分类
-sed -i "25i sed -i 's/\"services\"/\"nas\"/g' /usr/lib/lua/luci/controller/aria2.lua" package/default-settings/files/zzz-default-settings
-sed -i "25i sed -i 's/services/nas/g' /usr/lib/lua/luci/view/aria2/overview_status.htm" package/default-settings/files/zzz-default-settings
-sed -i "25i sed -i 's/\"services\"/\"nas\"/g' /usr/lib/lua/luci/controller/hd_idle.lua" package/default-settings/files/zzz-default-settings
-sed -i "25i sed -i 's/\"services\"/\"nas\"/g' /usr/lib/lua/luci/controller/samba.lua" package/default-settings/files/zzz-default-settings
-sed -i "25i sed -i 's/\"services\"/\"nas\"/g' /usr/lib/lua/luci/controller/samba4.lua" package/default-settings/files/zzz-default-settings
-sed -i "25i sed -i 's/\"services\"/\"nas\"/g' /usr/lib/lua/luci/controller/minidlna.lua" package/default-settings/files/zzz-default-settings
-sed -i "25i sed -i 's/\"services\"/\"nas\"/g' /usr/lib/lua/luci/controller/transmission.lua" package/default-settings/files/zzz-default-settings
-sed -i "25i sed -i 's/\"services\"/\"nas\"/g' /usr/lib/lua/luci/controller/mjpg-streamer.lua" package/default-settings/files/zzz-default-settings
-sed -i "25i sed -i 's/\"services\"/\"nas\"/g' /usr/lib/lua/luci/controller/p910nd.lua" package/default-settings/files/zzz-default-settings
-sed -i "25i sed -i 's/\"services\"/\"nas\"/g' /usr/lib/lua/luci/controller/usb_printer.lua" package/default-settings/files/zzz-default-settings
-sed -i "25i sed -i 's/\"services\"/\"nas\"/g' /usr/lib/lua/luci/controller/xunlei.lua" package/default-settings/files/zzz-default-settings
-sed -i "25i sed -i 's/services/nas/g'  /usr/lib/lua/luci/view/minidlna_status.htm" package/default-settings/files/zzz-default-settings
-sed -i "25i sed -i 's/services/nas/g' /usr/lib/lua/luci/controller/fileassistant.lua" package/default-settings/files/zzz-default-settings
+#sed -i "25i sed -i 's/\"services\"/\"nas\"/g' /usr/lib/lua/luci/controller/aria2.lua" package/default-settings/files/zzz-default-settings
+#sed -i "25i sed -i 's/services/nas/g' /usr/lib/lua/luci/view/aria2/overview_status.htm" package/default-settings/files/zzz-default-settings
+#sed -i "25i sed -i 's/\"services\"/\"nas\"/g' /usr/lib/lua/luci/controller/hd_idle.lua" package/default-settings/files/zzz-default-settings
+#sed -i "25i sed -i 's/\"services\"/\"nas\"/g' /usr/lib/lua/luci/controller/samba.lua" package/default-settings/files/zzz-default-settings
+#sed -i "25i sed -i 's/\"services\"/\"nas\"/g' /usr/lib/lua/luci/controller/samba4.lua" package/default-settings/files/zzz-default-settings
+#sed -i "25i sed -i 's/\"services\"/\"nas\"/g' /usr/lib/lua/luci/controller/minidlna.lua" package/default-settings/files/zzz-default-settings
+#sed -i "25i sed -i 's/\"services\"/\"nas\"/g' /usr/lib/lua/luci/controller/transmission.lua" package/default-settings/files/zzz-default-settings
+#sed -i "25i sed -i 's/\"services\"/\"nas\"/g' /usr/lib/lua/luci/controller/mjpg-streamer.lua" package/default-settings/files/zzz-default-settings
+#sed -i "25i sed -i 's/\"services\"/\"nas\"/g' /usr/lib/lua/luci/controller/p910nd.lua" package/default-settings/files/zzz-default-settings
+#sed -i "25i sed -i 's/\"services\"/\"nas\"/g' /usr/lib/lua/luci/controller/usb_printer.lua" package/default-settings/files/zzz-default-settings
+#sed -i "25i sed -i 's/\"services\"/\"nas\"/g' /usr/lib/lua/luci/controller/xunlei.lua" package/default-settings/files/zzz-default-settings
+#sed -i "25i sed -i 's/services/nas/g'  /usr/lib/lua/luci/view/minidlna_status.htm" package/default-settings/files/zzz-default-settings
+#sed -i "25i sed -i 's/services/nas/g' /usr/lib/lua/luci/controller/fileassistant.lua" package/default-settings/files/zzz-default-settings
 
 # 删除原主题包
 rm -rf package/lean/luci-theme-argon
