@@ -49,3 +49,4 @@ svn co https://github.com/kiddin9/openwrt-packages/trunk/pdnsd-alt package/lean/
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-syncdial package/lean/luci-app-syncdial
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-netdata package/lean/luci-app-netdata
 svn co https://github.com/kiddin9/openwrt-packages/trunk/netdata package/lean/netdata
+git clone https://github.com/khongpt/luci-app-cloudflared package/lean/luci-app-cloudflared
