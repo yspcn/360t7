@@ -25,7 +25,10 @@
 # Ôö¼Óssr
 git clone https://github.com/kenzok8/openwrt-packages.git package/openwrt-packages
 git clone https://github.com/kenzok8/small package/small
-git clone https://github.com/9iqyOS/op-npc package/npc
+#git clone https://github.com/9iqyOS/op-npc package/npc
+svn co https://github.com/Hyy2001X/AutoBuild-Packages/trunk/luci-app-npc package/luci-app-npc
+https://github.com/ghosthgytop/npc package/npc
+sed -i 's/0.26.8/0.26.10/g' package/npc/Makefile
 svn co https://github.com/immortalwrt/packages/trunk/lang/lua-neturl package/lang/lua-neturl
 # git clone https://github.com/fw876/helloworld.git package/openwrt-packages/luci-app-ssr-plus
 svn co https://github.com/immortalwrt/immortalwrt/trunk/package/emortal package/emortal
