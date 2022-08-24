@@ -19,7 +19,8 @@ sed -i 's/OpenWrt/Acrh17/g' package/base-files/files/bin/config_generate
 
 # 取消bootstrap为默认主题
 # sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
-sed -i 's/downloads.openwrt.org/mirrors.cloud.tencent.com\/openwrt/g' /etc/opkg/distfeeds.conf
+# 替换默认官方源为腾讯源
+sed -i "24i sed -i 's/downloads.openwrt.org/mirrors.cloud.tencent.com\/openwrt/g' /etc/opkg/distfeeds.conf" package/default-settings/files/zzz-default-settings
 
 # 删除原主题包
 rm -rf package/lean/luci-theme-argon
