@@ -83,7 +83,10 @@ jobs:
         $GITHUB_WORKSPACE/$DIY_P1_SH
 
     - name: Update feeds
-      run: cd openwrt && ./scripts/feeds update -a
+      run: |
+        sed -i 's#https://github.com/immortalwrt/packages.git;openwrt-21.02#https://github.com/immortalwrt/packages.git;openwrt-18.06#g' feeds.conf.default
+        sed -i 's#https://github.com/immortalwrt/luci.git;openwrt-21.02#https://github.com/immortalwrt/luci.git;openwrt-18.06-k5.4#g' feeds.conf.default
+        cd openwrt && ./scripts/feeds update -a
 
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
