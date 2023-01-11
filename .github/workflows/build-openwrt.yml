@@ -84,9 +84,9 @@ jobs:
 
     - name: Update feeds
       run: |
-        sed -i 's#https://github.com/immortalwrt/packages.git;openwrt-21.02#https://github.com/immortalwrt/packages.git;openwrt-18.06#g' feeds.conf.default
+        cd openwrt && sed -i 's#https://github.com/immortalwrt/packages.git;openwrt-21.02#https://github.com/immortalwrt/packages.git;openwrt-18.06#g' feeds.conf.default
         sed -i 's#https://github.com/immortalwrt/luci.git;openwrt-21.02#https://github.com/immortalwrt/luci.git;openwrt-18.06-k5.4#g' feeds.conf.default
-        cd openwrt && ./scripts/feeds update -a
+        ./scripts/feeds update -a
 
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
