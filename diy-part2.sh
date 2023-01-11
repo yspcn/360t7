@@ -13,9 +13,11 @@
 # sed -i 's/15744/32448/g'
 #sed -i 's/192.168.1.1/192.168.8.1/g' package/base-files/files/bin/config_generate
 sed -i 's/192.168.1.1/192.168.123.1/g' package/base-files/files/bin/config_generate
+sed -i 's#https://github.com/immortalwrt/packages.git;openwrt-21.02#https://github.com/immortalwrt/packages.git;openwrt-18.06#g' feeds.conf.default
+sed -i 's#https://github.com/immortalwrt/luci.git;openwrt-21.02#https://github.com/immortalwrt/luci.git;openwrt-18.06-k5.4' feeds.conf.default
 
 # Modify hostname
-sed -i 's/OpenWrt/Acrh17/g' package/base-files/files/bin/config_generate
+sed -i 's/ImmortalWrt/360T7/g' package/base-files/files/bin/config_generate
 
 # 取消bootstrap为默认主题
 sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
