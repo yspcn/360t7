@@ -4,7 +4,7 @@ Auto build OpenWrt firmware for 360T7 via GitHub Actions
 
 # 致谢大佬&Thanks
 
-https://github.com/coolsnowwolf/lede
+https://github.com/padavanonly/immortalwrtARM
 
 https://github.com/P3TERX/Actions-OpenWrt/
 
