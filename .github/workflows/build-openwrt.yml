@@ -89,6 +89,8 @@ jobs:
       run: |
         cd openwrt && rm -rf package/mtk/drivers/connectivity/conninfra
         svn co https://github.com/hanwckf/immortalwrt-mt798x/trunk/package/mtk/drivers/conninfra package/mtk/drivers/conninfra
+        rm rf package/mtk/drivers/warp
+        svn co https://github.com/hanwckf/immortalwrt-mt798x/trunk/package/mtk/drivers/warp
         ./scripts/feeds install -a
 
     - name: Load custom configuration
