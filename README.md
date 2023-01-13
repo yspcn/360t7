@@ -1,4 +1,4 @@
-# Auto build OpenWrt firmware for ACRH17
+# Auto build OpenWrt firmware for 306T7
 固件采用GitHub Actions不定时自动云编译。  ...
 Auto build OpenWrt firmware for ACRH17 via GitHub Actions
 
