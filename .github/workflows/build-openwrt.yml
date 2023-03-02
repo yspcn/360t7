@@ -15,11 +15,12 @@ name: Build OpenWrt 360t7
 
 on:
   repository_dispatch:
+  workflow_dispatch:
 #  release:
 #    types: published
-  push:
-    branches:
-      - master
+#  push:
+#    branches:
+#      - master
 #    paths:
 #      - 'acrh17.config'
   schedule:
