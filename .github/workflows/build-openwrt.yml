@@ -17,9 +17,9 @@ on:
   repository_dispatch:
   release:
     types: published
-#  push:
-#    branches:
-#      - master
+  push:
+    branches:
+      - master
 #    paths:
 #      - 'acrh17.config'
   schedule:
