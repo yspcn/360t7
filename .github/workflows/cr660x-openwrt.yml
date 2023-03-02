@@ -15,8 +15,8 @@ name: Build OpenWrt CR660x
 
 on:
   repository_dispatch:
-  release:
-    types: published
+#  release:
+#    types: published
   push:
     branches:
       - master
