@@ -15,11 +15,12 @@ name: Build OpenWrt CR660x
 
 on:
   repository_dispatch:
+  workflow_dispatch:
 #  release:
 #    types: published
-  push:
-    branches:
-      - master
+#  push:
+#    branches:
+#      - master
 #    paths:
 #      - 'cr660x.config'
   schedule:
