@@ -80,8 +80,6 @@ jobs:
         [ -e $FEEDS_CONF ] && mv $FEEDS_CONF openwrt/feeds.conf.default
         chmod +x $DIY_P1_SH
         cd openwrt
-        rm -rf target/linux/ramips
-        svn export https://github.com/padavanonly/immortalwrt/trunk/target/linux/ramips target/linux/ramips
         $GITHUB_WORKSPACE/$DIY_P1_SH
 
     - name: Update feeds
@@ -93,6 +91,8 @@ jobs:
     - name: Install feeds
       run: |
         cd openwrt && ./scripts/feeds install -a
+        rm -rf target/linux/ramips
+        svn export https://github.com/padavanonly/immortalwrt/trunk/target/linux/ramips target/linux/ramips
 
     - name: Load custom configuration
       run: |
