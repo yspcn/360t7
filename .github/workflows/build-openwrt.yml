@@ -15,8 +15,8 @@ name: Build OpenWrt 360t7
 
 on:
   repository_dispatch:
-  release:
-    types: published
+#  release:
+#    types: published
   push:
     branches:
       - master
