@@ -36,7 +36,7 @@ sed -i 's/ImmortalWrt/CR660x/g' package/base-files/files/bin/config_generate
 
 ##########
 # Modify the version number
-sed -i "s/OpenWrt /ysp build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" package/emortal/default-settings/files/zzz-default-settings
+#sed -i "s/OpenWrt /ysp build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" package/emortal/default-settings/files/zzz-default-settings
 
 # Modify default theme
 # sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
