@@ -31,7 +31,7 @@ on:
 #    types: started
 
 env:
-  REPO_URL: https://github.com/immortalwrt/immortalwrt #https://github.com/padavanonly/immortalwrtARM
+  REPO_URL: https://github.com/padavanonly/immortalwrtARM
   REPO_BRANCH: openwrt-21.02
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: cr660x.config
