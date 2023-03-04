@@ -46,7 +46,7 @@ sed -i 's/ImmortalWrt/CR660x/g' package/base-files/files/bin/config_generate
 # Add kernel build user
 [ -z $(grep "CONFIG_KERNEL_BUILD_USER=" .config) ] &&
     echo 'CONFIG_KERNEL_BUILD_USER="ysp"' >>.config ||
-    sed -i 's@\(CONFIG_KERNEL_BUILD_USER=\).*@\1$"Leopard"@' .config
+    sed -i 's@\(CONFIG_KERNEL_BUILD_USER=\).*@\1$"ysp"@' .config
 
 # Add kernel build domain
 [ -z $(grep "CONFIG_KERNEL_BUILD_DOMAIN=" .config) ] &&
