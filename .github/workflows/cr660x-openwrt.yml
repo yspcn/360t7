@@ -92,8 +92,6 @@ jobs:
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
     - name: Load custom feeds
       run: |
-        rm -rf target/linux/ramips
-        svn export https://github.com/padavanonly/immortalwrt/trunk/target/linux/ramips target/linux/ramips
         [ -e $FEEDS_CONF ] && mv $FEEDS_CONF openwrt/feeds.conf.default
         chmod +x $DIY_P1_SH
         cd openwrt
