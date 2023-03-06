@@ -204,7 +204,7 @@ jobs:
       uses: dev-drprasad/delete-older-releases@master
       with:
         repo: ${{ github.repository }}
-        keep_latest: 5
+        keep_latest: 15
         #keep_latest: ${{ github.event.inputs.rele }}
         delete_tags: true
       env:
