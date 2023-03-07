@@ -29,4 +29,4 @@ svn co https://github.com/immortalwrt/packages/trunk/lang/lua-neturl package/lan
 # git clone https://github.com/fw876/helloworld.git package/openwrt-packages/luci-app-ssr-plus
 svn co https://github.com/Hyy2001X/AutoBuild-Packages/trunk/luci-app-npc package/luci-app-npc
 #git clone https://github.com/khongpt/luci-app-cloudflared package/lean/luci-app-cloudflared
-sed -i 's/2023.03.22/2023.03.02/g' package/small/chinadns-ng/Makefile
+sed -i 's/2023.03.22/2023.02.28/g' package/small/chinadns-ng/Makefile
