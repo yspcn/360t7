@@ -11,7 +11,7 @@
 # Blog: https://p3terx.com
 #=================================================
 
-name: Build OpenWrt CR660x
+name: Build OpenWrt 360T7
 
 on:
   repository_dispatch:
