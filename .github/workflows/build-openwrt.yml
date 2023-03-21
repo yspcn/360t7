@@ -31,10 +31,10 @@ on:
     types: started
 
 env:
-  REPO_URL: https://github.com/Lienol/openwrt #https://github.com/padavanonly/immortalwrt
+  REPO_URL: https://github.com/coolsnowwolf/lede #https://github.com/Lienol/openwrt #https://github.com/padavanonly/immortalwrt
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: acrh17.config
+  CONFIG_FILE: lede.config
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part2.sh
   SSH_ACTIONS: false
