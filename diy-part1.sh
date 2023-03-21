@@ -30,7 +30,7 @@ svn co https://github.com/immortalwrt/packages/trunk/lang/lua-neturl package/lan
 svn co https://github.com/Hyy2001X/AutoBuild-Packages/trunk/luci-app-npc package/luci-app-npc
 #git clone https://github.com/khongpt/luci-app-cloudflared package/lean/luci-app-cloudflared
 #删除缺少依赖的luci
-rm -rf package/openwrt-packages/mosdns
+rm -rf package/openwrt-packages/luci-app-mosdns
 rm -rf package/feeds/packages/strongswan
 #修改最新版编译失败的bug
 sed -i 's/2023.03.22/2023.02.28/g' package/small/chinadns-ng/Makefile
