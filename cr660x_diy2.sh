@@ -40,8 +40,12 @@ sed -i 's/ImmortalWrt/CR660x/g' package/base-files/files/bin/config_generate
 
 # Modify default theme
 # sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
-
-
+rm -rf target/linux/ramips
+svc export https://github.com/padavanonly/immortalwrt/trunk/target/linux/ramips target/linux/ramips
+rm -rf package/emortal
+svn export https://github.com/padavanonly/immortalwrt/trunk/package/emortal package/emortal
+rm -rf package/network/config/firewall
+svn export https://github.com/padavanonly/immortalwrt/trunk/package/network/config/firewall package/network/config/firewall
 
 # Add kernel build user
 [ -z $(grep "CONFIG_KERNEL_BUILD_USER=" .config) ] &&
