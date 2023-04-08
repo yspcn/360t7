@@ -31,6 +31,7 @@ sed -i 's/ImmortalWrt/OpenWrt-360T7/g' package/base-files/files/bin/config_gener
 # git clone https://github.com/sypopo/luci-theme-argon-mc.git package/lean/luci-theme-argon-mc
 #git clone https://github.com/Leo-Jo-My/luci-theme-opentomcat.git package/lean/luci-theme-opentomcat
 #git clone https://github.com/garypang13/luci-theme-edge.git package/lean/luci-theme-edge
+git clone https://github.com/gngpp/luci-theme-design package/luci-theme-design
 
 # 更新
 # ./scripts/feeds update -a && ./scripts/feeds install -a
