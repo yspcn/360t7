@@ -35,6 +35,6 @@ rm -rf package/feeds/packages/strongswan
 #修改最新版编译失败的bug
 sed -i 's/2023.03.22/2023.02.28/g' package/small/chinadns-ng/Makefile
 sed -i 's/1.8.4/1.7.5/g' package/small/xray-core/Makefile
-sed -i 's/35339ee4c2ebd46cebd95ad7791d38a97db3a6afd97277a33e4ee7be35c9a3b2/a5fc936136a57a463bf9a895d068fdfa895b168ae6093c58a10208e098b6b2d3/g' package/small/xray-core/Makefile
+sed -i 's/89f73107abba9bd438111edfe921603ddb3c2b631b2716fbdc6be78552f0d322/a5fc936136a57a463bf9a895d068fdfa895b168ae6093c58a10208e098b6b2d3/g' package/small/xray-core/Makefile
 sed -i 's/1.3.4/1.3.3/g' package/small/hysteria/Makefile
 sed -i 's/13862594252dcea83d791b0cf8234874154ba623f22d94cef685561a710717c1/11ca9df98a8a17a348dcdac92a19fef0e25dde8e536a9778705f765ac208a202/g' package/small/hysteria/Makefile
