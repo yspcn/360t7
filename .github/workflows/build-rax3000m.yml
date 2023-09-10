@@ -31,8 +31,8 @@ on:
 #    types: started
 
 env:
-  REPO_URL: https://github.com/immortalwrt/immortalwrt
-  REPO_BRANCH: openwrt-23.05
+  REPO_URL: https://github.com/hanwckf/immortalwrt-mt798x #https://github.com/immortalwrt/immortalwrt
+  REPO_BRANCH: openwrt-21.02 #openwrt-23.05
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: rax3000m.config
   DIY_P1_SH: diy-part1.sh
