@@ -11,7 +11,7 @@
 # Blog: https://p3terx.com
 #=================================================
 
-name: Build OpenWrt 360T7 luci-18.06
+name: Build OpenWrt CMCC rax3000m
 
 on:
   repository_dispatch:
@@ -22,7 +22,7 @@ on:
 #    branches:
 #      - master
 #    paths:
-#      - '360t7.config'
+#      - 'rax3000m.config'
   schedule:
     - cron: 10 1 */15 * *
 #          分 时 日 月 周5
@@ -34,7 +34,7 @@ env:
   REPO_URL: https://github.com/immortalwrt/immortalwrt
   REPO_BRANCH: openwrt-23.05
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: 360t7_1806.config
+  CONFIG_FILE: rax3000m.config
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: 360t7-diy2.sh
   SSH_ACTIONS: false
