@@ -20,6 +20,8 @@
 # git clone https://github.com/kenzok8/openwrt-packages.git package/diy-packages
 # git clone https://github.com/kenzok8/small.git package/small
 
+# 换源
+sed -i 's,mirrors.vsean.net/openwrt,http://mirrors.pku.edu.cn/immortalwrt,g' package/emortal/default-settings/files/99-default-settings-chinese
 
 
 # Ôö¼Óssr
