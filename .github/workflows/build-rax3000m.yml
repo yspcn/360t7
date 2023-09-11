@@ -109,7 +109,6 @@ jobs:
         chmod +x $DIY_P2_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P2_SH
-        rm -rf package/small/sing-box
     - name: SSH connection to Actions
       if: env.SSH_ACTIONS == 'true'
       uses: mxschmitt/action-tmate@v3
