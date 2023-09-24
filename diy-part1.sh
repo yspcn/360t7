@@ -37,6 +37,8 @@ rm -rf package/feeds/packages/strongswan
 #修改最新版编译失败的bug
 rm -rf package/libs/mbedtls
 svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-23.05/package/libs/mbedtls package/libs/mbedtls
+rm -rf feeds/packages/lang/golang
+svn co https://github.com/immortalwrt/packages/branches/openwrt-23.05/lang/golang feeds/packages/lang/golang
 sed -i 's/2023.03.22/2023.02.28/g' package/small/chinadns-ng/Makefile
 sed -i 's/1.8.4/1.7.5/g' package/small/xray-core/Makefile
 sed -i 's/89f73107abba9bd438111edfe921603ddb3c2b631b2716fbdc6be78552f0d322/a5fc936136a57a463bf9a895d068fdfa895b168ae6093c58a10208e098b6b2d3/g' package/small/xray-core/Makefile
