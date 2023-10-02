@@ -35,10 +35,10 @@ svn co https://github.com/Hyy2001X/AutoBuild-Packages/trunk/luci-app-npc package
 rm -rf package/openwrt-packages/luci-app-mosdns
 rm -rf package/feeds/packages/strongswan
 #修改最新版编译失败的bug
-rm -rf package/libs/mbedtls
-svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-23.05/package/libs/mbedtls package/libs/mbedtls
-rm -rf feeds/packages/lang/golang
-svn co https://github.com/immortalwrt/packages/branches/openwrt-23.05/lang/golang feeds/packages/lang/golang
+#rm -rf package/libs/mbedtls
+#svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-23.05/package/libs/mbedtls package/libs/mbedtls
+#rm -rf feeds/packages/lang/golang
+#svn co https://github.com/immortalwrt/packages/branches/openwrt-23.05/lang/golang feeds/packages/lang/golang
 sed -i 's/04fb797d8d04b8af9c4746ab9c1d659a3575a677892c2d5d9194a4b0e210e2ab/da51732b2a55d0f2e3270f70b638a32f303b675c0db636abefa5ce316e3269f7/g' package/small/shadowsocks-rust/Makefile
 sed -i 's/2023.03.22/2023.02.28/g' package/small/chinadns-ng/Makefile
 sed -i 's/1.8.4/1.7.5/g' package/small/xray-core/Makefile
