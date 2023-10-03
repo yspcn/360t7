@@ -42,7 +42,8 @@ git clone https://github.com/gngpp/luci-theme-design package/luci-theme-design
 
 # Modify default theme
 # sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
-
+rm -rf feeds/packages/net/wget
+svn co https://github.com/openwrt/packages/branches/openwrt-19.07/net/wget feeds/packages/net/wget
 
 
 # Add kernel build user
