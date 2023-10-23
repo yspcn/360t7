@@ -43,9 +43,9 @@ rm -rf feeds/packages/net/wget
 svn co https://github.com/openwrt/packages/branches/openwrt-19.07/net/wget feeds/packages/net/wget
 sed -i 's/04fb797d8d04b8af9c4746ab9c1d659a3575a677892c2d5d9194a4b0e210e2ab/da51732b2a55d0f2e3270f70b638a32f303b675c0db636abefa5ce316e3269f7/g' package/small/shadowsocks-rust/Makefile
 sed -i 's/2023.03.22/2023.02.28/g' package/small/chinadns-ng/Makefile
-sed -i 's/1.8.4/1.7.5/g' package/small/xray-core/Makefile
-sed -i 's/89f73107abba9bd438111edfe921603ddb3c2b631b2716fbdc6be78552f0d322/a5fc936136a57a463bf9a895d068fdfa895b168ae6093c58a10208e098b6b2d3/g' package/small/xray-core/Makefile
-sed -i 's/1.3.4/1.3.3/g' package/small/hysteria/Makefile
-sed -i 's/13862594252dcea83d791b0cf8234874154ba623f22d94cef685561a710717c1/11ca9df98a8a17a348dcdac92a19fef0e25dde8e536a9778705f765ac208a202/g' package/small/hysteria/Makefile
-sed -i 's/1.5.0-beta.6/1.5.0-beta.5/g' package/small/sing-box/Makefile
-sed -i 's/e5674734fba4fb04e64ea0df98da3ee5889034ced7382f77fcee8cf3e37d9d93/a25204c9f2c949de666fb88c95a087269920c822bd8097d1396b96b878082c36/g' package/small/sing-box/Makefile
+#sed -i 's/1.8.4/1.7.5/g' package/small/xray-core/Makefile
+#sed -i 's/89f73107abba9bd438111edfe921603ddb3c2b631b2716fbdc6be78552f0d322/a5fc936136a57a463bf9a895d068fdfa895b168ae6093c58a10208e098b6b2d3/g' package/small/xray-core/Makefile
+#sed -i 's/1.3.4/1.3.3/g' package/small/hysteria/Makefile
+#sed -i 's/13862594252dcea83d791b0cf8234874154ba623f22d94cef685561a710717c1/11ca9df98a8a17a348dcdac92a19fef0e25dde8e536a9778705f765ac208a202/g' package/small/hysteria/Makefile
+#sed -i 's/1.5.0-beta.6/1.5.0-beta.5/g' package/small/sing-box/Makefile
+#sed -i 's/e5674734fba4fb04e64ea0df98da3ee5889034ced7382f77fcee8cf3e37d9d93/a25204c9f2c949de666fb88c95a087269920c822bd8097d1396b96b878082c36/g' package/small/sing-box/Makefile
