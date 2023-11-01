@@ -44,7 +44,8 @@ git clone https://github.com/gngpp/luci-theme-design package/luci-theme-design
 # sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
 rm -rf feeds/packages/net/wget
 svn co https://github.com/openwrt/packages/branches/openwrt-19.07/net/wget feeds/packages/net/wget
-
+rm -rf feeds/packages/lang/golang
+svn co https://github.com/immortalwrt/packages/branches/openwrt-23.05/lang/golang feeds/packages/lang/golang
 
 # Add kernel build user
 [ -z $(grep "CONFIG_KERNEL_BUILD_USER=" .config) ] &&
