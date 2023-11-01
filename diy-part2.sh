@@ -58,3 +58,6 @@ sed -i "s/OpenWrt /Leopard build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" pack
 # 删除lean里的百度文本（编译失败），增加百度PCS-web
 # rm -rf package/lean/baidupcs-web
 # git clone https://github.com/liuzhuoling2011/baidupcs-web.git package/lean/baidupcs-web
+
+rm -rf feeds/packages/lang/golang
+svn co https://github.com/immortalwrt/packages/branches/openwrt-23.05/lang/golang feeds/packages/lang/golang
