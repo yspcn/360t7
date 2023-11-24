@@ -1,0 +1,429 @@
+
+config global
+	option node_socks_port '1070'
+	option socks_enabled '0'
+	option acl_enable '0'
+	option direct_dns_protocol 'auto'
+	option direct_dns_query_strategy 'UseIP'
+	option remote_dns '1.1.1.1'
+	option remote_dns_query_strategy 'UseIPv4'
+	option close_log '0'
+	option loglevel 'error'
+	option remote_fakedns '0'
+	option remote_dns_protocol 'udp'
+	option localhost_proxy '0'
+	option node 'myshunt'
+	option remote_dns_detour 'remote'
+	option enabled '1'
+
+config global_haproxy
+	option balancing_enable '0'
+
+config global_delay
+	option auto_on '0'
+	option start_daemon '1'
+	option start_delay '60'
+
+config global_forwarding
+	option tcp_no_redir_ports 'disable'
+	option udp_no_redir_ports 'disable'
+	option tcp_redir_ports '22,25,53,143,465,587,853,993,995,80,443'
+	option udp_redir_ports '1:65535'
+	option accept_icmp '0'
+	option use_nft '0'
+	option tcp_proxy_way 'redirect'
+	option ipv6_tproxy '0'
+
+config global_xray
+	option sniffing '1'
+	option route_only '0'
+
+config global_other
+	option nodes_ping 'auto_ping tcping'
+
+config global_rules
+	option geosite_update '1'
+	option geoip_update '1'
+	option v2ray_location_asset '/usr/share/v2ray/'
+	option geoip_url 'https://api.github.com/repos/Loyalsoldier/v2ray-rules-dat/releases/latest'
+	option geosite_url 'https://api.github.com/repos/Loyalsoldier/v2ray-rules-dat/releases/latest'
+	option auto_update '1'
+	option week_update '7'
+	option time_update '3'
+
+config global_app
+	option brook_file '/usr/bin/brook'
+	option singbox_file '/usr/bin/sing-box'
+	option xray_file '/usr/bin//xray'
+	option hysteria_file '/usr/bin/hysteria'
+
+config global_subscribe
+	option filter_keyword_mode '1'
+	list filter_discard_list '过期时间'
+	list filter_discard_list '剩余流量'
+	list filter_discard_list 'QQ群'
+	list filter_discard_list '官网'
+	option ss_aead_type 'xray'
+
+config global_singbox
+	option sniff_override_destination '1'
+	option geoip_path '/usr/share/singbox/geoip.db'
+	option geoip_url 'https://github.com/SagerNet/sing-geoip/releases/latest/download/geoip.db'
+	option geosite_path '/usr/share/singbox/geosite.db'
+	option geosite_url 'https://github.com/SagerNet/sing-geosite/releases/latest/download/geosite.db'
+
+config nodes 'myshunt'
+	option remarks '分流总节点'
+	option protocol '_shunt'
+	option AD 'nil'
+	option China '_direct'
+	option domainStrategy 'IPOnDemand'
+	option domainMatcher 'hybrid'
+	option type 'sing-box'
+	option preproxy_enabled '0'
+	option TVB 'G4Q25mkY'
+	option DirectGame 'GxOKQnob'
+	option ProxyGame 'GxOKQnob'
+	option BT 'GxOKQnob'
+	option Proxy 'G4Q25mkY'
+	option QUIC 'G4Q25mkY'
+	option UDP 'G4Q25mkY'
+	option default_node 'G4Q25mkY'
+	option Direct 'G4Q25mkY'
+	option Netflix 'ITQ5t1cT'
+	option OpenAI 'ITQ5t1cT'
+
+config shunt_rules 'DirectGame'
+	option remarks 'DirectGame'
+	option network 'tcp,udp'
+	option domain_list 'api.steampowered.com
+regexp:\.cm.steampowered.com$
+regexp:\.steamserver.net$
+geosite:category-games@cn
+'
+	option ip_list '103.10.124.0/24
+103.10.125.0/24
+103.28.54.0/24
+146.66.152.0/24
+146.66.155.0/24
+153.254.86.0/24
+155.133.224.0/23
+155.133.226.0/24
+155.133.227.0/24
+155.133.230.0/24
+155.133.232.0/24
+155.133.233.0/24
+155.133.234.0/24
+155.133.236.0/23
+155.133.238.0/24
+155.133.239.0/24
+155.133.240.0/23
+155.133.245.0/24
+155.133.246.0/24
+155.133.248.0/24
+155.133.249.0/24
+155.133.250.0/24
+155.133.251.0/24
+155.133.252.0/24
+155.133.253.0/24
+155.133.254.0/24
+155.133.255.0/24
+162.254.192.0/24
+162.254.193.0/24
+162.254.194.0/23
+162.254.195.0/24
+162.254.196.0/24
+162.254.197.0/24
+162.254.198.0/24
+162.254.199.0/24
+185.25.182.0/24
+185.25.183.0/24
+190.217.33.0/24
+192.69.96.0/22
+205.185.194.0/24
+205.196.6.0/24
+208.64.200.0/24
+208.64.201.0/24
+208.64.202.0/24
+208.64.203.0/24
+208.78.164.0/22'
+
+config shunt_rules 'ProxyGame'
+	option remarks 'ProxyGame'
+	option domain_list 'geosite:category-games@!cn
+domain:store.steampowered.com
+'
+
+config shunt_rules 'Direct'
+	option network 'tcp,udp'
+	option remarks 'Direct'
+	option ip_list 'geoip:private
+114.114.114.114
+114.114.115.115
+223.5.5.5
+223.6.6.6
+119.29.29.29
+180.76.76.76
+'
+	option domain_list 'apple.com
+microsoft.com
+dyndns.com
+steamcontent.com
+dl.steam.clngaa.com
+dl.steam.ksyna.com
+st.dl.bscstorage.net
+st.dl.eccdnx.com
+st.dl.pinyuncloud.com
+cdn.mileweb.cs.steampowered.com.8686c.com
+cdn-ws.content.steamchina.com
+cdn-qc.content.steamchina.com
+cdn-ali.content.steamchina.com
+epicgames-download1-1251447533.file.myqcloud.com'
+
+config shunt_rules 'AD'
+	option remarks 'AD'
+	option domain_list 'geosite:category-ads-all'
+	option network 'tcp,udp'
+
+config shunt_rules 'BT'
+	option remarks 'BT'
+	option protocol 'bittorrent'
+	option network 'tcp,udp'
+
+config shunt_rules 'Netflix'
+	option remarks 'Netflix'
+	option network 'tcp,udp'
+	option domain_list 'geosite:netflix'
+
+config shunt_rules 'OpenAI'
+	option remarks 'OpenAI'
+	option domain_list 'geosite:openai'
+
+config shunt_rules 'TVB'
+	option remarks 'TVB'
+	option network 'tcp,udp'
+	option domain_list 'geosite:tvb
+geosite:mytvsuper
+'
+
+config shunt_rules 'Proxy'
+	option network 'tcp,udp'
+	option remarks 'Proxy'
+	option ip_list '149.154.160.0/20
+91.108.4.0/22
+91.108.56.0/24
+109.239.140.0/24
+67.198.55.0/24
+8.8.4.4
+8.8.8.8
+208.67.222.222
+208.67.220.220
+1.1.1.1
+1.1.1.2
+1.0.0.1
+9.9.9.9
+149.112.112.112
+2001:67c:4e8::/48
+2001:b28:f23c::/48
+2001:b28:f23d::/48
+2001:b28:f23f::/48
+2001:b28:f242::/48
+2001:4860:4860::8888
+2001:4860:4860::8844
+2606:4700:4700::1111
+2606:4700:4700::1001
+'
+	option domain_list 'geosite:geolocation-!cn
+domain:tailscale.com
+geosite:google'
+
+config shunt_rules 'China'
+	option remarks 'China'
+	option network 'tcp,udp'
+	option ip_list 'geoip:cn'
+	option domain_list 'geosite:cn'
+
+config shunt_rules 'QUIC'
+	option remarks 'QUIC'
+	option port '443'
+	option network 'udp'
+
+config shunt_rules 'UDP'
+	option remarks 'UDP'
+	option network 'udp'
+
+config nodes '9VIff5Sm'
+	option tls '1'
+	option uuid '088abe5b-7c53-4434-de6d-2ba1e50543f5'
+	option timeout '60'
+	option encryption 'none'
+	option fingerprint 'chrome'
+	option tls_allowInsecure '1'
+	option add_from '导入'
+	option grpc_mode 'multi'
+	option type 'Xray'
+	option port '443'
+	option protocol 'vless'
+	option address 'vnc.aijinju.com'
+	option remarks 'Oracle-web'
+	option grpc_serviceName '5cc9eff919'
+	option transport 'grpc'
+	option add_mode '1'
+
+config nodes 'SbOa82Pl'
+	option tls '1'
+	option protocol 'vmess'
+	option add_from '导入'
+	option port '443'
+	option ws_path 'f68e1d98deb6'
+	option remarks 'Arm-vmess-tls'
+	option add_mode '1'
+	option ws_host 'cbs-shipments-hometown-circumstances.trycloudflare.com'
+	option uuid '9e9a8477-563d-471d-b941-e70c85b8ce79'
+	option timeout '60'
+	option tls_serverName 'cbs-shipments-hometown-circumstances.trycloudflare.com'
+	option tls_allowInsecure '1'
+	option alter_id '0'
+	option type 'sing-box'
+	option security 'auto'
+	option address '104.18.181.181'
+	option transport 'ws'
+
+config nodes 'zOghjF45'
+	option ws_host 'cbs-shipments-hometown-circumstances.trycloudflare.com'
+	option type 'sing-box'
+	option protocol 'vmess'
+	option tls '0'
+	option security 'auto'
+	option add_from '导入'
+	option transport 'ws'
+	option ws_path 'f68e1d98deb6'
+	option port '80'
+	option uuid '9e9a8477-563d-471d-b941-e70c85b8ce79'
+	option address '104.18.191.102'
+	option remarks 'Arm-vmess'
+	option alter_id '0'
+	option timeout '60'
+	option add_mode '1'
+
+config nodes 'G4Q25mkY'
+	option remarks 'Arm-hysteria2'
+	option address '144.24.88.17'
+	option port '1001'
+	option tls_allowInsecure '1'
+	option hysteria2_obfs '33812d54-3a90-4c76-92ec-47cae7463fd8'
+	option type 'sing-box'
+	option protocol 'hysteria2'
+	option hysteria2_up_mbps '35'
+	option hysteria2_down_mbps '100'
+	option hysteria2_obfs_type 'salamander'
+	option hysteria2_obfs_password '33812d54-3a90-4c76-92ec-47cae7463fd8'
+	option hysteria2_auth_password '33812d54-3a90-4c76-92ec-47cae7463fd8'
+
+config nodes '0yluJAds'
+	option tls '1'
+	option type 'sing-box'
+	option protocol 'trojan'
+	option add_from '导入'
+	option password '33812d54-3a90-4c76-92ec-47cae7463fd8'
+	option port '1002'
+	option tls_allowInsecure '1'
+	option address '144.24.88.17'
+	option remarks 'arm trojan'
+	option timeout '60'
+	option add_mode '1'
+
+config nodes 'Ckvhd2WI'
+	option remarks 'Hysteria2-central'
+	option type 'Hysteria2'
+	option protocol 'udp'
+	option port '13357'
+	option hysteria2_auth_password '643e86b4'
+	option hysteria2_up_mbps '35'
+	option hysteria2_down_mbps '100'
+	option hysteria2_recv_window_conn '16777216'
+	option hysteria2_recv_window '33554432'
+	option tls_serverName 'ray.expin.tk'
+	option address '202.5.26.19'
+
+config subscribe_list
+	option remark 'cloudflare'
+	option url 'https://cf.expin.tk/sub/5e6eca29-5597-4964-97cc-9383a1921840'
+	option allowInsecure '1'
+	option filter_keyword_mode '5'
+	option ss_aead_type 'global'
+	option auto_update '0'
+	option user_agent 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36'
+
+config nodes 'GxOKQnob'
+	option remarks 'oracle-ub'
+	option type 'Hysteria2'
+	option protocol 'udp'
+	option address '152.67.216.126'
+	option port '1001'
+	option hysteria2_auth_password 'aWCPFeGNnjN8'
+	option tls_serverName 'bing.com'
+	option tls_allowInsecure '1'
+	option hysteria2_up_mbps '35'
+	option hysteria2_down_mbps '100'
+
+config nodes 'qTOnMDWg'
+	option remarks 'mail-hy2'
+	option type 'Hysteria2'
+	option protocol 'udp'
+	option address '216.158.234.169'
+	option port '1080'
+	option tls_serverName 'bing.com'
+	option tls_allowInsecure '1'
+	option hysteria2_up_mbps '35'
+	option hysteria2_down_mbps '100'
+	option hysteria2_auth_password 'mb5KYbc+eXlQ'
+
+config nodes 'Zn72uijb'
+	option tls '1'
+	option type 'sing-box'
+	option protocol 'vmess'
+	option tls_allowInsecure '1'
+	option grpc_serviceName '5cc9eff919'
+	option transport 'grpc'
+	option add_from '导入'
+	option security 'auto'
+	option tls_serverName 'hg.aijinju.com'
+	option port '443'
+	option uuid '69d6445b-df48-4808-bd92-e41eaee23d41'
+	option address 'hg.aijinju.com'
+	option remarks 'arm-grpc'
+	option alter_id '0'
+	option timeout '60'
+	option add_mode '1'
+
+config nodes 'Xh9kI9ol'
+	option tls '1'
+	option uuid '9033c04f-e5a6-4fed-c285-2f3a2002a40c'
+	option timeout '60'
+	option encryption 'none'
+	option fingerprint 'chrome'
+	option tls_allowInsecure '1'
+	option add_from '导入'
+	option grpc_mode 'multi'
+	option type 'Xray'
+	option port '443'
+	option protocol 'vless'
+	option address 'mail.aijinju.com'
+	option remarks 'mail-grpc'
+	option grpc_serviceName 'c2bd31b073'
+	option transport 'grpc'
+	option add_mode '1'
+
+config nodes 'ITQ5t1cT'
+	option remarks 'cloudcone'
+	option type 'Hysteria2'
+	option protocol 'udp'
+	option address '74.48.125.72'
+	option port '8443'
+	option hysteria2_auth_password 'acdf58b518b1ea8d'
+	option tls_serverName 'bing.com'
+	option tls_allowInsecure '1'
+	option hysteria2_up_mbps '30'
+	option hysteria2_down_mbps '100'
+

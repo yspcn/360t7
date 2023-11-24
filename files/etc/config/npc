@@ -1,0 +1,10 @@
+
+config npc
+	option server_addr '144.24.88.17'
+	option server_port '8024'
+	option vkey 'h5b0gt6kg2wxs1ay'
+	option protocol 'tcp'
+	option compress '1'
+	option crypt '1'
+	option enable '1'
+

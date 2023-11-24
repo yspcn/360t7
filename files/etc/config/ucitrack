@@ -1,0 +1,96 @@
+
+config network
+	option init 'network'
+	list affects 'dhcp'
+
+config wireless
+	list affects 'network'
+
+config firewall
+	option init 'firewall'
+	list affects 'luci-splash'
+	list affects 'qos'
+	list affects 'miniupnpd'
+
+config olsr
+	option init 'olsrd'
+
+config dhcp
+	option init 'dnsmasq'
+	list affects 'odhcpd'
+
+config odhcpd
+	option init 'odhcpd'
+
+config dropbear
+	option init 'dropbear'
+
+config httpd
+	option init 'httpd'
+
+config fstab
+	option exec '/sbin/block mount'
+
+config qos
+	option init 'qos'
+
+config system
+	option init 'led'
+	option exec '/etc/init.d/log reload'
+	list affects 'luci_statistics'
+	list affects 'dhcp'
+
+config luci_splash
+	option init 'luci_splash'
+
+config ntpclient
+	option init 'ntpclient'
+
+config samba
+	option init 'samba'
+
+config tinyproxy
+	option init 'tinyproxy'
+
+config shadowsocksr
+	option init 'shadowsocksr'
+
+config upnpd
+	option init 'miniupnpd'
+
+config appfilter
+	option exec '/usr/bin/oaf_rule reload'
+
+config vlmcsd
+	option init 'kms'
+
+config autoreboot
+	option init 'autoreboot'
+
+config dnsfilter
+	option init 'dnsfilter'
+
+config lucky
+	option init 'lucky'
+
+config npc
+	option init 'npc'
+
+config openclash
+	option init 'openclash'
+
+config syncdial
+	option exec '/bin/genwancfg'
+
+config usb_printer
+	option init 'usb_printer'
+
+config turboacc
+	option init 'turboacc'
+
+config passwall2
+	option init 'passwall2'
+
+config passwall2_server
+	option init 'passwall2_server'
+

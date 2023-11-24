@@ -1,0 +1,11 @@
+
+config turboacc 'global'
+	option set '0'
+
+config turboacc 'config'
+	option tcpcca 'cubic'
+	option fastpath 'mediatek_hnat'
+	option fastpath_mh_eth_hnat '1'
+	option fastpath_mh_eth_hnat_v6 '1'
+	option fullcone '0'
+

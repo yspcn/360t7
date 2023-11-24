@@ -1,0 +1,3 @@
+0 0 * * * /etc/init.d/acme start
+30 8 * * * /usr/bin/etherwake -D -i "br-lan" "00:E0:B4:1D:65:96"
+0 3 * * * lua /usr/share/passwall2/rule_update.lua log > /dev/null 2>&1 &

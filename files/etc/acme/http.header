@@ -1,0 +1,12 @@
+HTTP/2 200 
+server: nginx
+date: Tue, 21 Nov 2023 16:05:41 GMT
+content-type: application/json
+content-length: 163
+replay-nonce: oahbarcY77gvwIFwMrA9-sZKtUMHuOkK8SRs7kRVzJw
+cache-control: max-age=0, no-cache, no-store
+access-control-allow-origin: *
+link: <https://acme.zerossl.com/v2/DV90/authz/pzV8UcjNZ14IwRrAa98dUw>;rel="up"
+retry-after: 60
+strict-transport-security: max-age=15724800; includeSubDomains
+

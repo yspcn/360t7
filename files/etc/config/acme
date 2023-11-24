@@ -1,0 +1,20 @@
+
+config acme
+	option state_dir '/etc/acme'
+	option account_email 'admin@aijinju.com'
+	option debug '0'
+
+config cert 'leiyun'
+	option enabled '1'
+	option use_staging '0'
+	option keylength '2048'
+	option validation_method 'dns'
+	option days '10'
+	option dns 'dns_cf'
+	list credentials 'CF_Email="exunpin@gmail.com"'
+	list credentials 'CF_Key="f5dbc4d4c8e665ad8280f3fba5f89e43b235c"'
+	option use_acme_server '1'
+	option acme_server 'https://acme.zerossl.com/v2/DV90'
+	list domains 'ly.leiyun.top'
+	option update_uhttpd '1'
+
