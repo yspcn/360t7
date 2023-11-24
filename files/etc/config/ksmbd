@@ -1,7 +1,0 @@
-
-config globals
-	option workgroup 'WORKGROUP'
-	option description 'Ksmbd on OpenWrt'
-	option interface 'lan'
-	option allow_legacy_protocols '1'
-
