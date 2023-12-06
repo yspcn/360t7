@@ -27,9 +27,10 @@ sed -i 's,mirrors.vsean.net/openwrt,mirrors.pku.edu.cn/immortalwrt,g' package/em
 # Ôö¼Óssr
 git clone https://github.com/kenzok8/openwrt-packages.git package/openwrt-packages
 git clone https://github.com/kenzok8/small package/small
-svn co https://github.com/immortalwrt/packages/trunk/lang/lua-neturl package/lang/lua-neturl
+git clone --depth=1 -b master https://github.com/Hyy2001X/AutoBuild-Packages package/AutoBuild-Packages
+#svn co https://github.com/immortalwrt/packages/trunk/lang/lua-neturl package/lang/lua-neturl
 # git clone https://github.com/fw876/helloworld.git package/openwrt-packages/luci-app-ssr-plus
-svn co https://github.com/Hyy2001X/AutoBuild-Packages/trunk/luci-app-npc package/luci-app-npc
+#svn co https://github.com/Hyy2001X/AutoBuild-Packages/trunk/luci-app-npc package/luci-app-npc
 #git clone https://github.com/khongpt/luci-app-cloudflared package/lean/luci-app-cloudflared
 #删除缺少依赖的luci
 rm -rf package/openwrt-packages/luci-app-mosdns
