@@ -41,8 +41,9 @@ sed -i 's/ImmortalWrt/CR660x/g' package/base-files/files/bin/config_generate
 # Modify default theme
 # sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
 rm -rf feeds/packages/lang/golang
-svn co https://github.com/immortalwrt/packages/branches/openwrt-23.05/lang/golang feeds/packages/lang/golang
-
+#svn co https://github.com/immortalwrt/packages/branches/openwrt-23.05/lang/golang feeds/packages/lang/golang
+git clone --depth=1 -b openwrt-23.05 https://github.com/immortalwrt/packages
+cp -rf packages/lang/golang feeds/packages/lang/  && rm -rf packages
 
 # Add kernel build user
 [ -z $(grep "CONFIG_KERNEL_BUILD_USER=" .config) ] &&
