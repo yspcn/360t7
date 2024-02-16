@@ -46,8 +46,8 @@ git clone https://github.com/gngpp/luci-theme-design package/luci-theme-design
 #svn co https://github.com/openwrt/packages/branches/openwrt-19.07/net/wget feeds/packages/net/wget
 rm -rf feeds/packages/lang/golang
 #svn co https://github.com/immortalwrt/packages/branches/openwrt-23.05/lang/golang feeds/packages/lang/golang
-git clone --depth=1 -b openwrt-23.05 https://github.com/immortalwrt/packages
-cp -rf packages/lang/golang feeds/packages/lang/  && rm -rf packages
+git clone --depth=1 -b openwrt-23.05 https://github.com/Lienol/openwrt-packages #https://github.com/immortalwrt/packages
+cp -rf packages/lang/golang feeds/packages/lang/  && rm -rf openwrt-packages
 
 # Add kernel build user
 [ -z $(grep "CONFIG_KERNEL_BUILD_USER=" .config) ] &&
