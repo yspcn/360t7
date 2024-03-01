@@ -63,3 +63,4 @@ rm -rf feeds/packages/lang/golang
 #svn co https://github.com/immortalwrt/packages/branches/openwrt-23.05/lang/golang feeds/packages/lang/golang
 git clone --depth=1 -b openwrt-23.05 https://github.com/immortalwrt/packages
 cp -rf packages/lang/golang feeds/packages/lang/  && rm -rf packages
+sed -i 's/ +libopenssl-legacy//g' package/small/shadowsocksr-libev/Makefile
