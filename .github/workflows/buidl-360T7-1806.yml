@@ -108,8 +108,6 @@ jobs:
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         chmod +x $DIY_P2_SH
         cd openwrt
-        rm -rf feeds/packages/lang/golang
-        svn co https://github.com/immortalwrt/packages/branches/openwrt-23.05/lang/golang feeds/packages/lang/golang
         $GITHUB_WORKSPACE/$DIY_P2_SH
     - name: SSH connection to Actions
       if: env.SSH_ACTIONS == 'true'
