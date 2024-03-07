@@ -36,7 +36,7 @@ git clone --depth=1 https://github.com/openwrt/packages packages-temp
 rm -rf feeds/packages/net/tailscale && cp -rf packages-temp/net/tailscale feeds/packages/net/
 rm -rf packages-temp
 sed -i '/\/etc\/init\.d\/tailscale/d;/\/etc\/config\/tailscale/d;' feeds/packages/net/tailscale/Makefile
-
+rm -rf package/feeds/luci/luci-app-ipsec-vpnd package/feeds/luci/luci-app-ipsec-vpnserver-manyusers package/openwrt-packages/homeproxy
 
 #删除缺少依赖的luci
 rm -rf package/openwrt-packages/luci-app-mosdns
