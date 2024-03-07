@@ -28,13 +28,20 @@ sed -i 's,mirrors.vsean.net/openwrt,mirrors.pku.edu.cn/immortalwrt,g' package/em
 git clone https://github.com/kenzok8/openwrt-packages.git package/openwrt-packages
 git clone https://github.com/kenzok8/small package/small
 git clone --depth=1 -b master https://github.com/Hyy2001X/AutoBuild-Packages package/AutoBuild-Packages
-#svn co https://github.com/immortalwrt/packages/trunk/lang/lua-neturl package/lang/lua-neturl
-# git clone https://github.com/fw876/helloworld.git package/openwrt-packages/luci-app-ssr-plus
-#svn co https://github.com/Hyy2001X/AutoBuild-Packages/trunk/luci-app-npc package/luci-app-npc
-#git clone https://github.com/khongpt/luci-app-cloudflared package/lean/luci-app-cloudflared
+git clone --depth=1 https://github.com/asvow/luci-app-tailscale package/luci-app-tailscale
+# tailscale install
+mkdir -p package/utils/ucode
+wget -P package/utils/ucode/ https://github.com/openwrt/openwrt/raw/openwrt-22.03/package/utils/ucode/Makefile
+git clone --depth=1 https://github.com/openwrt/packages packages-temp
+rm -rf feeds/packages/net/tailscale && cp -rf packages-temp/net/tailscale feeds/packages/net/
+rm -rf packages-temp
+sed -i '/\/etc\/init\.d\/tailscale/d;/\/etc\/config\/tailscale/d;' feeds/packages/net/tailscale/Makefile
+
+
 #删除缺少依赖的luci
 rm -rf package/openwrt-packages/luci-app-mosdns
 rm -rf package/feeds/packages/strongswan
+
 #修改最新版编译失败的bug
 #rm -rf package/libs/mbedtls
 #svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-23.05/package/libs/mbedtls package/libs/mbedtls
