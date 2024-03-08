@@ -54,7 +54,7 @@ git clone --depth=1 https://github.com/openwrt/packages packages-temp
 rm -rf feeds/packages/net/tailscale && cp -rf packages-temp/net/tailscale feeds/packages/net/
 rm -rf packages-temp
 sed -i '/\/etc\/init\.d\/tailscale/d;/\/etc\/config\/tailscale/d;' feeds/packages/net/tailscale/Makefile
-rm -rf package/feeds/luci/luci-app-ipsec-vpnd package/feeds/luci/luci-app-ipsec-vpnserver-manyusers package/openwrt-packages/homeproxy
+rm -rf package/feeds/luci/luci-app-ipsec-vpnd package/feeds/luci/luci-app-ipsec-vpnserver-manyusers package/openwrt-packages/luci-app-homeproxy
 
 # Add kernel build user
 [ -z $(grep "CONFIG_KERNEL_BUILD_USER=" .config) ] &&
