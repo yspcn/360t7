@@ -29,14 +29,7 @@ git clone https://github.com/kenzok8/openwrt-packages.git package/openwrt-packag
 git clone https://github.com/kenzok8/small package/small
 git clone --depth=1 -b master https://github.com/Hyy2001X/AutoBuild-Packages package/AutoBuild-Packages
 git clone --depth=1 https://github.com/asvow/luci-app-tailscale package/luci-app-tailscale
-# tailscale install
-mkdir -p package/utils/ucode
-wget -P package/utils/ucode/ https://github.com/openwrt/openwrt/raw/openwrt-22.03/package/utils/ucode/Makefile
-git clone --depth=1 https://github.com/openwrt/packages packages-temp
-rm -rf feeds/packages/net/tailscale && cp -rf packages-temp/net/tailscale feeds/packages/net/
-rm -rf packages-temp
-sed -i '/\/etc\/init\.d\/tailscale/d;/\/etc\/config\/tailscale/d;' feeds/packages/net/tailscale/Makefile
-rm -rf package/feeds/luci/luci-app-ipsec-vpnd package/feeds/luci/luci-app-ipsec-vpnserver-manyusers package/openwrt-packages/homeproxy
+
 
 #删除缺少依赖的luci
 rm -rf package/openwrt-packages/luci-app-mosdns
