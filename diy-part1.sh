@@ -45,7 +45,7 @@ rm -rf package/feeds/packages/strongswan
 #sed -i 's/04fb797d8d04b8af9c4746ab9c1d659a3575a677892c2d5d9194a4b0e210e2ab/da51732b2a55d0f2e3270f70b638a32f303b675c0db636abefa5ce316e3269f7/g' package/small/shadowsocks-rust/Makefile
 #sed -i 's/2023.03.22/2023.02.28/g' package/small/chinadns-ng/Makefile
 sed -i 's/1.8.9/1.8.7/g' package/small/xray-core/Makefile
-sed -i 's/e8f46177d792b89700f164ca28fbf1a3c7d95a3ecf98871cb0dd5e474b46a859/156105b89465ca948971a774c0bc7e56ee68e764bdfde58923037dc837aab4be/g' package/small/xray-core/Makefile
+sed -i 's/708cf7754c733c8eb98939495c0c2e698ca5712383b87dc25eea974a0d332721/e8f46177d792b89700f164ca28fbf1a3c7d95a3ecf98871cb0dd5e474b46a859/g' package/small/xray-core/Makefile
 #sed -i 's/1.3.4/1.3.3/g' package/small/hysteria/Makefile
 #sed -i 's/13862594252dcea83d791b0cf8234874154ba623f22d94cef685561a710717c1/11ca9df98a8a17a348dcdac92a19fef0e25dde8e536a9778705f765ac208a202/g' package/small/hysteria/Makefile
 #sed -i 's/1.5.0-beta.6/1.5.0-beta.5/g' package/small/sing-box/Makefile
