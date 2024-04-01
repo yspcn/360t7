@@ -50,7 +50,7 @@ sed -i 's/ +libopenssl-legacy//g' package/small/shadowsocksr-libev/Makefile
 # tailscale install
 mkdir -p package/utils/ucode
 wget -P package/utils/ucode/ https://github.com/openwrt/openwrt/raw/openwrt-22.03/package/utils/ucode/Makefile
-git clone --depth=1 https://github.com/openwrt/packages packages-temp
+git clone --depth=1 -b 23.05 https://github.com/openwrt/packages packages-temp
 rm -rf feeds/packages/net/tailscale && cp -rf packages-temp/net/tailscale feeds/packages/net/
 rm -rf packages-temp
 sed -i '/\/etc\/init\.d\/tailscale/d;/\/etc\/config\/tailscale/d;' feeds/packages/net/tailscale/Makefile
