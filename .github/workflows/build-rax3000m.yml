@@ -16,6 +16,12 @@ name: Build OpenWrt CMCC rax3000m
 on:
   repository_dispatch:
   workflow_dispatch:
+    inputs:
+      EEPROM:
+        description: 'Use nx30pro eeprom'
+        required: true
+        default: true
+        type: boolean
 #  release:
 #    types: published
 #  push:
@@ -128,6 +134,22 @@ jobs:
       uses: mxschmitt/action-tmate@v3
       timeout-minutes: 30
 
+    - name: 使用nx30pro的高功率eeprom
+      if: github.event.inputs.EEPROM == 'true'
+      run: |
+        cp back/nx30pro_eeprom.bin openwrt/package/mtk/drivers/mt_wifi/files/mt7981-default-eeprom/MT7981_iPAiLNA_EEPROM.bin
+        cd openwrt
+        ## 如果MAC没有修复则单独固定WiFi MAC
+        if sed -n '/rax3000m/,/;;/p' target/linux/mediatek/mt7981/base-files/etc/board.d/02_network | grep -q 'lan_mac=$(mmc_get_mac_binary factory 0x24)'; then
+        ## 创建一个辅助文件。文件内容是写入MAC地址到dat文件，固定wifi MAC地址
+        echo -e "\t\tlocal wifi0_mac=\"\$(mmc_get_mac_binary factory 0x04)\"
+        \t\tsed -i \"/^MacAddress=.*/ {s/.*/MacAddress=\$wifi0_mac/;b;}; \\\$aMacAddress=\$wifi0_mac\" /etc/wireless/mediatek/mt7981.dbdc.b0.dat
+        \t\tlocal wifi1_mac=\"\$(macaddr_setbit_la \$wifi0_mac)\"
+        \t\tsed -i \"/^MacAddress=.*/ {s/.*/MacAddress=\$wifi1_mac/;b;}; \\\$aMacAddress=\$wifi1_mac\" /etc/wireless/mediatek/mt7981.dbdc.b1.dat" > temp_insert.txt
+        ## 将文本内容写入02_network
+        sed -i '/mediatek_setup_macs()/,/\};/ {/cmcc,rax3000m-emmc)/ {n;n;n;r temp_insert.txt
+        }}' target/linux/mediatek/mt7981/base-files/etc/board.d/02_network
+        fi
     - name: Download package
       id: package
       run: |
