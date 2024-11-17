@@ -16,9 +16,7 @@ sed -i 's/192.168.1.1/192.168.123.1/g' package/base-files/files/bin/config_gener
 
 # Modify default golang
 rm -rf feeds/packages/lang/golang
-#svn co https://github.com/immortalwrt/packages/branches/openwrt-23.05/lang/golang feeds/packages/lang/golang
-git clone --depth=1 -b 23.05 https://github.com/Lienol/openwrt-packages #https://github.com/immortalwrt/packages
-cp -rf openwrt-packages/lang/golang feeds/packages/lang/  && rm -rf openwrt-packages
+git clone https://github.com/sbwml/packages_lang_golang -b 23.x feeds/packages/lang/golang
 sed -i 's/ +libopenssl-legacy//g' package/small/shadowsocksr-libev/Makefile
 
 # Modify hostname
