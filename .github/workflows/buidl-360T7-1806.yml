@@ -31,7 +31,7 @@ on:
 #    types: started
 
 env:
-  REPO_URL: https://github.com/padavanonly/immortalwrtARM
+  REPO_URL: https://github.com/padavanonly/immortalwrt
   REPO_BRANCH: mt7981
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: 360t7_1806.config
