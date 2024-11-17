@@ -47,12 +47,7 @@ sed -i 's/ImmortalWrt/CR660x/g' package/base-files/files/bin/config_generate
 
 # Modify default theme
 # sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
-rm -rf feeds/packages/lang/golang
-#svn co https://github.com/immortalwrt/packages/branches/openwrt-23.05/lang/golang feeds/packages/lang/golang
-#git clone --depth=1 -b openwrt-23.05 https://github.com/immortalwrt/packages
-#cp -rf packages/lang/golang feeds/packages/lang/  && rm -rf packages
-git clone --depth=1 -b 23.05 https://github.com/Lienol/openwrt-packages #https://github.com/immortalwrt/packages
-cp -rf openwrt-packages/lang/golang feeds/packages/lang/  && rm -rf openwrt-packages
+
 sed -i 's/ +libopenssl-legacy//g' package/small/shadowsocksr-libev/Makefile
 # tailscale install
 mkdir -p package/utils/ucode
