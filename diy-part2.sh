@@ -66,11 +66,6 @@ sed -i "s/OpenWrt /Leopard build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" pack
 # rm -rf package/lean/baidupcs-web
 # git clone https://github.com/liuzhuoling2011/baidupcs-web.git package/lean/baidupcs-web
 
-rm -rf feeds/packages/lang/golang
-#svn co https://github.com/immortalwrt/packages/branches/openwrt-23.05/lang/golang feeds/packages/lang/golang
-git clone --depth=1 -b openwrt-23.05 https://github.com/immortalwrt/packages
-cp -rf packages/lang/golang feeds/packages/lang/  && rm -rf packages
-sed -i 's/ +libopenssl-legacy//g' package/small/shadowsocksr-libev/Makefile
 # tailscale install
 mkdir -p package/utils/ucode
 wget -P package/utils/ucode/ https://github.com/openwrt/openwrt/raw/openwrt-22.03/package/utils/ucode/Makefile
