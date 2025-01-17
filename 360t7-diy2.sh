@@ -60,6 +60,8 @@ rm -f feeds/packages/net/tailscale/Makefile
 wget -P feeds/packages/net/tailscale/ https://github.com/openwrt/packages/raw/openwrt-23.05/net/tailscale/Makefile
 sed -i '/\/etc\/init\.d\/tailscale/d;/\/etc\/config\/tailscale/d;' feeds/packages/net/tailscale/Makefile
 rm -rf package/feeds/luci/luci-app-ipsec-vpnd package/feeds/luci/luci-app-ipsec-vpnserver-manyusers package/openwrt-packages/luci-app-homeproxy
+cd package/small/luci-app-passwall && git reset --hard c2108834abea9cbb7248400bc3d94743516eb921 && cd ../../
+cd package/small/luci-app-passwall2 && git reset --hard c2108834abea9cbb7248400bc3d94743516eb921 && cd ../../
 
 # Add kernel build user
 [ -z $(grep "CONFIG_KERNEL_BUILD_USER=" .config) ] &&
