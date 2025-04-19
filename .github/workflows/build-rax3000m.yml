@@ -137,7 +137,7 @@ jobs:
     - name: 使用nx30pro的高功率eeprom
       if: github.event.inputs.EEPROM == 'true'
       run: |
-        cp back/nx30pro_eeprom.bin openwrt/package/mtk/drivers/mt_wifi/files/mt7981-default-eeprom/MT7981_iPAiLNA_EEPROM.bin
+        cp back/nx30pro_eeprom.bin openwrt/package/mtk/drivers/mt_wifi/files/mt7981-fw-20240823/MT7981_iPAiLNA_EEPROM.bin
         cd openwrt
         ## 如果MAC没有修复则单独固定WiFi MAC
         if sed -n '/rax3000m/,/;;/p' target/linux/mediatek/mt7981/base-files/etc/board.d/02_network | grep -q 'lan_mac=$(mmc_get_mac_binary factory 0x24)'; then
