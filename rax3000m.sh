@@ -14,7 +14,8 @@ git clone --depth=1 -b 23.05 https://github.com/Lienol/openwrt-packages #https:/
 cp -rf openwrt-packages/lang/golang feeds/packages/lang/  && rm -rf openwrt-packages
 #git clone --depth=1 -b 23.05 https://github.com/openwrt/openwrt openwrt-package
 #cp -rf openwrt-package/package/libs/openssl package/libs/ && rm -rf openwrt-packages
-#sed -i 's/ +libopenssl-legacy//g' package/small/shadowsocksr-libev/Makefile
+sed -i 's/ +libopenssl-legacy//g' package/small/shadowsocksr-libev/Makefile
+rm -rf package/small/luci-app-homeproxy && rm -rf package/small/mihomo
 
 # tailscale install
 mkdir -p package/utils/ucode
