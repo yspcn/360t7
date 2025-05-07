@@ -29,7 +29,8 @@ git clone https://github.com/kenzok8/openwrt-packages.git package/openwrt-packag
 git clone https://github.com/kenzok8/small package/small
 git clone --depth=1 -b master https://github.com/Hyy2001X/AutoBuild-Packages package/AutoBuild-Packages
 git clone --depth=1 https://github.com/asvow/luci-app-tailscale package/luci-app-tailscale
-
+sed -i 's/ +libopenssl-legacy//g' package/small/shadowsocksr-libev/Makefile
+rm -rf package/small/luci-app-homeproxy && rm -rf package/small/mihomo
 
 #删除缺少依赖的luci
 rm -rf package/openwrt-packages/luci-app-mosdns
