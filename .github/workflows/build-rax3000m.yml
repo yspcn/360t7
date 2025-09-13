@@ -37,7 +37,7 @@ on:
 #    types: started
 
 env:
-  REPO_URL: https://github.com/jiehuihui/immortalwrt24.10-6.6-cmcc_rax3000m-237 #https://github.com/hanwckf/immortalwrt-mt798x
+  REPO_URL: https://github.com/padavanonly/immortalwrt-mt798x-6.6.git #https://github.com/hanwckf/immortalwrt-mt798x
   REPO_BRANCH: openwrt-24.10-6.6 #2410 #openwrt-21.02
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: rax3000m.config
