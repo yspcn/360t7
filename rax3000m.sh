@@ -8,7 +8,7 @@ sed -i 's/ImmortalWrt/CMCC-rax3000m/g' package/base-files/files/bin/config_gener
 
 # Modify default golang
 rm -rf feeds/packages/lang/golang
-git clone https://github.com/sbwml/packages_lang_golang -b 24.x feeds/packages/lang/golang
+git clone https://github.com/sbwml/packages_lang_golang -b 25.x feeds/packages/lang/golang
 
 #cp -rf openwrt-package/package/libs/openssl package/libs/ && rm -rf openwrt-packages
 sed -i 's/ +libopenssl-legacy//g' package/small/shadowsocksr-libev/Makefile
