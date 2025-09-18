@@ -16,7 +16,7 @@ sed -i 's/192.168.1.1/192.168.123.1/g' package/base-files/files/bin/config_gener
 
 # Modify default golang
 rm -rf feeds/packages/lang/golang
-git clone https://github.com/sbwml/packages_lang_golang -b 23.x feeds/packages/lang/golang
+git clone https://github.com/sbwml/packages_lang_golang -b 25.x feeds/packages/lang/golang
 
 sed -i 's/ +libopenssl-legacy//g' package/small/shadowsocksr-libev/Makefile
 rm -rf package/small/dns2tcp
