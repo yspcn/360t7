@@ -13,9 +13,10 @@
 # sed -i 's/15744/32448/g'
 #sed -i 's/192.168.1.1/192.168.8.1/g' package/base-files/files/bin/config_generate
 sed -i 's/192.168.1.1/192.168.123.1/g' package/base-files/files/bin/config_generate
+sed -i "s/192\.168\.[0-9]*\.[0-9]*/192.168.123.1/g" $(find feeds/luci/modules/luci-mod-system -type f -name "flash.js")
 
 rm -rf feeds/packages/lang/golang
-git clone https://github.com/sbwml/packages_lang_golang -b 25.x feeds/packages/lang/golang
+git clone https://github.com/sbwml/packages_lang_golang -b 24.x feeds/packages/lang/golang
 
 # Modify hostname
 sed -i 's/ImmortalWrt/OpenWrt-360T7/g' package/base-files/files/bin/config_generate
